@@ -7,7 +7,7 @@ export default defineComponent({
 </script>
 
 <template>
-List Page
+<h1>List Page</h1>
 </template>
 
 <style scoped>
