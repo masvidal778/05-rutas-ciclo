@@ -8,12 +8,22 @@ export default defineComponent({
 
 <template>
 <div>
-  <a href="/">Pokemon List</a>
-  <a href="/id">Pokemon per ID</a>
-  <a href="/about">About</a>
+  <router-link to="/">Pokemon List</router-link>
+  <router-link to="/id">Pokemon per ID</router-link>
+  <router-link to="/about">About</router-link>
 </div>
 </template>
 
 <style scoped>
+
+div{
+  padding: 0 30px;
+}
+
+div a{
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 10px;
+}
 
 </style>
