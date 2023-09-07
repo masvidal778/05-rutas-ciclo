@@ -10,7 +10,7 @@ export default defineComponent({
 
 <div>
   <router-link to="/">Pokemon List</router-link>
-  <router-link to="/id">Pokemon per ID</router-link>
+  <router-link :to="{ name: 'pokemon-id', params: { id: 85 } }">Pokemon per ID</router-link>
   <router-link to="/about">About</router-link>
 </div>
 
