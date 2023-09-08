@@ -1,7 +1,7 @@
 <template>
   <Navbar />
   <img alt="Vue logo" src="./assets/logo.png">
-  <router-view />
+  <router-view /> <!-- Main route, visible at all routes -->
 </template>
 
 <script>
