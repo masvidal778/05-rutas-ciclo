@@ -36,6 +36,27 @@ const routes = [
         ]
     },
     {
+        path: '/dbz',
+        name: 'dbz',
+        component: () => import(/* webpackChunkName: "PokemonLayout" */ '@/modules/dbz/layouts/DragonBallLayout.vue'),
+        children: [
+            {
+                path: 'characters', //'' path per defecte
+                name: 'dbz-characters',
+                component: () => import(/* webpackChunkName: "ListPage" */ '@/modules/dbz/pages/Characters.vue')
+            },
+            {
+                path: 'about',
+                name: 'dbz-about',
+                component: () => import(/* webpackChunkName: "AboutPage" */ '@/modules/dbz/pages/About.vue')
+            },
+            {
+                path: '',
+                redirect: { name: 'dbz-characters' }
+            }
+        ]
+    },
+    {
         path: '/:pathMatch(.*)*',
         component: () => import(/* webpackChunkName: "NoPageFound" */ '@/modules/shared/pages/NoPageFound.vue')
     },
