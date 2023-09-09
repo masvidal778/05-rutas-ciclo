@@ -7,14 +7,17 @@ export default defineComponent({
 </script>
 
 <template>
-<div class="dbz-layout">
-  <h1>DBZ Layout</h1>
-  <router-view></router-view>
-</div>
+
+  <div class="dbz-layout">
+    <h1>DBZ Layout</h1>
+    <router-view></router-view>
+  </div>
+
 </template>
 
 <style scoped>
-.dbz-layout{
+.dbz-layout {
   background-color: darkorange;
 }
+
 </style>
