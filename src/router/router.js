@@ -1,4 +1,5 @@
 import {createRouter, createWebHashHistory} from "vue-router";
+import isAuthenticatedGuard from "@/router/auth-guard";
 
 const routes = [
     {
@@ -38,6 +39,7 @@ const routes = [
     {
         path: '/dbz',
         name: 'dbz',
+        beforeEnter: [ isAuthenticatedGuard ],
         component: () => import(/* webpackChunkName: "DragonBallLayout" */ '@/modules/dbz/layouts/DragonBallLayout.vue'),
         children: [
             {
@@ -82,7 +84,7 @@ router.beforeEach((to, from, next) => {
     }
 })
 
- */
+
 
 // Guard Global - Asíncrono
 const canAccess = () => {
@@ -108,5 +110,7 @@ router.beforeEach(async (to, from, next) => {
         : next({ name: 'pokemon-home' })
 
 })
+
+ */
 
 export default router
