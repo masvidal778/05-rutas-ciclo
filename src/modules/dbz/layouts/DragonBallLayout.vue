@@ -7,6 +7,7 @@ export default defineComponent({
 </script>
 
 <template>
+
   <div class="dbz-layout">
     <h1>DBZ Layout</h1>
     <router-view></router-view>
@@ -18,4 +19,5 @@ export default defineComponent({
 .dbz-layout {
   background-color: darkorange;
 }
+
 </style>

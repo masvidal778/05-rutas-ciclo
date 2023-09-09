@@ -43,6 +43,7 @@ const routes = [
             {
                 path: 'characters', //'' path per defecte
                 name: 'dbz-characters',
+
                 component: () => import(/* webpackChunkName: "Characters" */ '@/modules/dbz/pages/Characters.vue')
             },
             {
